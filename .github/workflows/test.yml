@@ -1,0 +1,14 @@
+name: test
+on:
+  push:
+
+jobs:
+  test:
+    name: annotate
+    runs-on: ubuntu-latest
+    steps:
+    - name: Issue error command with STDOUT
+      run: echo '::error file=.github/workflows/test.yml,line=1::from stdout'
+
+    - name: Issue error command with STDERR
+      run: echo '::error file=.github/workflows/test.yml,line=1::from stderr' > /dev/stderr
