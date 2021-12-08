@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo ::error file=LICENSE::test
+      - run: echo ::error file=.github/workflows/test.yml::test2
