@@ -1,0 +1,11 @@
+name: test
+on:
+  push:
+
+jobs:
+  test:
+    name: annotate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo ::error file=LICENSE::test
